@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Jumper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #game-board {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 5px;
+        }
+        .number-block {
+            cursor: pointer;
+            transition: color 0.3s ease, border-color 0.3s ease;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        #timer {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-board"></div>
+        </div>
+        <div id="timer">Час: <span id="time-remaining">60</span> с</div>
+        <button id="restart-button">Почати спочатку</button>
+    </div>
+    <div id="leaderboard">
+        <h2>Таблиця рекордів</h2>
+        <table id="leaderboard-table">
+            <tr>
+                <th>Гра</th>
+                <th>Час залишку</th>
+            </tr>
+        </table>
+    </div>
+
+    <script src = script.js></script>
+</body>
+</html>
